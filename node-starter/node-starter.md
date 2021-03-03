@@ -362,6 +362,17 @@ npm run pokemon
 
 ---
 
+<style Scoped>
+  section {
+    background-color: #588496;
+  }
+  section h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 82px;
+    letter-spacing: 50px;
+  }
+</style>
 # まとめ
 
 ---
@@ -390,4 +401,15 @@ npm run pokemon
 
 ---
 
+<style Scoped>
+  section {
+    background-color: #588496;
+  }
+  section h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 82px;
+    letter-spacing: 50px;
+  }
+</style>
 # おわり
