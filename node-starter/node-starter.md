@@ -2,23 +2,72 @@
 marp: true
 ---
 
-# 前準備
+<!-- Global CSS -->
+<style>
+  section h1 {
+    color: #588496;
+    margin-bottom: 45px;
+  }
+  section h2 {
+    margin-bottom: 45px;
+  }
+  section strong {
+    color: #ff6487;
+  }
+  section p {
+    margin-bottom: 30px;
+  }
+</style>
 
-* [Node.js](https://nodejs.org/ja/)のインストール
+<!-- Scoped CSS -->
+<style scoped>
+  section {
+    padding: 0;
+  }
+  section p {
+    margin: 0;
+  }
+  section img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 5%;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    margin: auto 0;
+  }
+  section h1 {
+    margin-top: 0;
+    padding: 0;
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #588496;
+    color: #fefefe;
+  }
+</style>
 
----
-
+![logo](./img/node-logo.svg)
 # Node.js 入門
 
 ---
 
-# そもそもNode.jsとは何ぞや
+<style Scoped>
+  section h1 {
+    font-size: 62px;
+    text-align: center;
+  }
+</style>
+# そもそもNode.jsとは何ぞや🤔？
 
 ---
-
 # Node.jsとは
  
-ざっくり説明すると、サーバーサイドで動作する`JavaScript`です。
+ざっくり説明すると、**サーバーサイドで動作する`JavaScript`です。**
 
 言葉で聞いてもピンと来ないと思うので実際に動かしてみましょう。
 
@@ -27,8 +76,8 @@ marp: true
 # 手順
 
 * コンソールに`test`を出力するだけの`js`を作成する。
-* エクスプローラー等から`js`ファイルをクリックして実行 → Error
-* コマンドラインから、`Node.js`を経由して`js`実行 → `test`が出力される。
+* エクスプローラー等から`js`ファイルをクリックして実行 → **Error**
+* コマンドラインから、`Node.js`を経由して`js`実行 → **`test`が出力される。**
 
 ---
 
@@ -42,7 +91,7 @@ marp: true
 サーバーサイド（バックエンド）でも使用できるようになります。
 
 慣れ親しんだ`js`でバックエンドの処理もかける事から、
-フロントエンドエンジニアを中心に人気が高い。
+フロントエンドエンジニアを中心に人気が高まったようです。
 
 ---
 
@@ -153,13 +202,12 @@ npm run test2
 
 `node`には便利なモジュール（パッケージ）が沢山あります。
 
-有名なパッケージを紹介しているページ
+下記は人気のパッケージを紹介しているページです。
 https://github.com/sindresorhus/awesome#readme
 
 `npm`は**パッケージ管理システム**。
-先程までのハンズオンは、環境構築と基礎的な使用方法になります。
-
-次は、実際に`npm`でモジュールを使用して行きましょう！
+先程までのハンズオンは、環境構築と基礎的な使用方法になりますが、
+次は、実際に`npm`でモジュール（パッケージ）を使用してみましょう！
 
 ---
 
@@ -186,7 +234,8 @@ https://github.com/sindresorhus/awesome#readme
 ---
 
 # pokemon モジュールの使用
-ポケモンの名前を出力しよう
+
+ポケモンの名前を出力しよう！
 
 ---
 
@@ -201,7 +250,7 @@ https://github.com/sindresorhus/awesome#readme
 npm i pokemon
 ```
 
-これでインストールができたはずです。
+これでモジュールのインストールができます。
 
 ---
 
@@ -220,11 +269,15 @@ npm i pokemon
 ## package-lock.json
 
 モジュールのインストール時に作成される`package-lock.json`ファイル
+
 こちらは、インストールしたモジュールの詳細なバージョンや、
 参照元が記載されています。`package-lock.json`が存在する場合は
 そこに記載されているバージョンのモジュールがインストールされる為、
 インストール時にエラーが出るときはこの`lock`ファイルを削除すると
 上手くいくことも多々あります。
+
+`git`等でバージョン管理をされている場合は、
+特別な理由が無ければ管理対象から外しておきましょう。
 
 ---
 
@@ -232,6 +285,19 @@ npm i pokemon
 
 モジュールインストール時に作成される`node_modules`
 ここにはインストールしたモジュールのソースコードが保存されています。
+
+今回、インストールしたのは`pokemon`モジュールのみですが
+実際`node_modules`を確認すると、`pokemon`以外にも
+幾つかモジュールがインストールされていると思います。
+
+---
+
+## node_modules
+
+`node_modules`の中を見てみると、実際にモジュールがどのように作成されているかも
+分かります。`pokemon`モジュールは公式でも述べられている通り、
+ポケモンの配列データと、それを幾つかの形式で出力する
+関数があるだけの簡単な内容になってますね！
 
 `node_modules`は多種多様なモジュールのソースコードが保存されている為、
 容量・ファイル数が膨大になる事が多いです。
