@@ -57,9 +57,13 @@ marp: true
 ---
 
 <style Scoped>
+  section {
+    background-color: #588496;
+  }
   section h1 {
     font-size: 62px;
     text-align: center;
+    color: #fff;
   }
 </style>
 # そもそもNode.jsとは何ぞや🤔？
@@ -112,7 +116,19 @@ marp: true
 こちらもまずは実際に動かしてみましょう。
 
 ---
-
+<style Scoped>
+  section {
+    background-color: #588496;
+  }
+  section h1 {
+    color: #fff;
+    font-size: 62px;
+    margin: 0;
+  }
+  section p {
+    color: #c0cace;
+  }
+</style>
 # npm ハンズオン 1
 
 環境構築・基礎的な使用方法
@@ -210,6 +226,19 @@ https://github.com/sindresorhus/awesome#readme
 次は、実際に`npm`でモジュール（パッケージ）を使用してみましょう！
 
 ---
+<style Scoped>
+  section {
+    background-color: #588496;
+  }
+  section h1 {
+    color: #fff;
+    font-size: 62px;
+    margin: 0;
+  }
+  section p {
+    color: #c0cace;
+  }
+</style>
 
 # npm ハンズオン 2
 
@@ -232,7 +261,19 @@ https://github.com/sindresorhus/awesome#readme
 では、それぞれの使い方を見てみましょう。
 
 ---
-
+<style Scoped>
+  section {
+    background-color: #588496;
+  }
+  section h1 {
+    color: #fff;
+    font-size: 62px;
+    margin: 0;
+  }
+  section p {
+    color: #c0cace;
+  }
+</style>
 # pokemon モジュールの使用
 
 ポケモンの名前を出力しよう！
